@@ -1,0 +1,39 @@
+{
+  "name": "shoppingcart",
+  "version": "1.0.0",
+  "description": "Simple cart app",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build",
+    "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot",
+    "build:prod": "webpack -p && cp src/index.html dist/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gururajmca/Reactjs.git"
+  },
+  "keywords": [
+    "simple",
+    "shopping",
+    "cart"
+  ],
+  "author": "gururajmca@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gururajmca/Reactjs/issues"
+  },
+  "homepage": "https://github.com/gururajmca/Reactjs#readme",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
