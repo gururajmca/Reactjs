@@ -1,0 +1,23 @@
+import React from 'react';
+import Cart from './containers/Cart';
+import ProductList from './containers/ProductList';
+
+const App = () => {
+    return (
+        <div className="container">
+            <div className="row">
+                <h4> Fresh Fruits </h4> 
+            </div>
+            <div className="row">
+                <div className="col-md-8">
+                    <ProductList />
+                </div>
+                <div className="col-md-4">
+                    <Cart />
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default App;

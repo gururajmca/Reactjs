@@ -1,0 +1,36 @@
+$bgColor : blue;
+
+.mainClass {
+    color: $bgColor;
+    h1 {
+        text-transform: uppercase;
+    }
+}
+
+.thumbnail {
+    height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+.thumbnail .img {
+    height: 150px;
+}
+
+.caption {
+    p {
+        font-size: 10px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+    h4 {
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+.box-content {
+    width: 100%;
+    hr {
+        border-bottom: 1px solid #ccc;
+    }
+}

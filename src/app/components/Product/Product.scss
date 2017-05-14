@@ -1,0 +1,40 @@
+.product {
+    margin: 0;
+    overflow: auto;
+}
+
+.product__price {
+    display: inline-block;
+    line-height: 34px;
+}
+
+.product__button-wrap {
+    float: right;
+}
+.thumbnail {
+    height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+.thumbnail .img {
+    height: 150px;
+}
+
+.caption {
+    p {
+        font-size: 10px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+    h4 {
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+.box-content {
+    width: 100%;
+    hr {
+        border-bottom: 1px solid #ccc;
+    }
+}

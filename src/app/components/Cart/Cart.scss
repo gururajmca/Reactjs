@@ -1,0 +1,37 @@
+.carttop {
+    .num_dis {
+        font-size:14px;
+        font-weight: bold;
+    }
+}
+
+.cart ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cart ul {
+    li {
+        padding: 0 10px;
+    }
+}
+
+.cart-item {
+  margin-bottom: .3em;
+}
+
+.cart-item__name {
+  display: inline-block;
+}
+
+.cart-item__price {
+  float: right;
+}
+
+.cart__total {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  text-align: right;
+}
