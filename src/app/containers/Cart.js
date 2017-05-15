@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Cart from '../components/Cart';
-import { getItems, getCurrency, getTotal, removeFromCart } from '../ducks/cart';
+import { getItems, getItemQuantity, getCurrency, getTotal} from '../ducks/cart';
 
 const mapStateToProps = (state, props) => {
     return {
         items: getItems(state, props),
+        item_quantity: getItemQuantity(state, props),
         currency: getCurrency(state, props),
-        total: getTotal(state, props),
-        removeFromCart: (id) => dispatch(removeFromCart(id))
+        total: getTotal(state, props)
     }
 }
 

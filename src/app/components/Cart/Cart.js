@@ -1,10 +1,9 @@
 import React, { PropTypes } from 'react';
 import CartItem from './CartItem';
 
-const Cart = ({ items, total, currency }) => {
+const Cart = ({ items, total, currency, quantity }) => {
 
     var number_of_items = items.length;
-    console.log(items);
     
     return (
         <div>
@@ -27,7 +26,7 @@ const Cart = ({ items, total, currency }) => {
                           <div className="col-md-4">Item Name</div>
                           <div className="col-md-2">Quantity</div>
                           <div className="col-md-4">Total</div>
-                          <div className="col-md-2"></div>
+                          <div className="col-md-2">{quantity}</div>
                         </div>
                         {items.length > 0 && (
                             <div className="row">
@@ -43,7 +42,6 @@ const Cart = ({ items, total, currency }) => {
                         {items.length === 0 && (
                             <div className="alert alert-info">Cart is empty</div>
                         )}
-                        <div className="cart__total">Total: {total} {currency}</div>
                     </div>
                 </div>
             </div>
@@ -55,6 +53,7 @@ Cart.propTypes = {
     items: PropTypes.array,
     total: PropTypes.number,
     currency: PropTypes.string,
+    quantity: PropTypes.number
 }
 
 export default Cart;

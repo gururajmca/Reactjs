@@ -16,7 +16,7 @@ const ProductList = ({ products }) => {
 }
 
 ProductList.propTypes = {
-    products: PropTypes.array,
+    products: PropTypes.array
 }
 
 export default ProductList;

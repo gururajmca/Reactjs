@@ -2,32 +2,37 @@ import React, { Component, PropTypes } from 'react';
 
 class Product extends Component {
     
-    handleClick = () => {
-        const { id, addToCart, removeFromCart, isInCart, increaseQuantity } = this.props;
+    constructor(props) {
+        super(props);
+        console.log('inside constructor');
+        console.log(props);
+    }
 
-        //addToCart(id);
+    handleClick = () => {
+        const { id, addToCart, removeFromCart, isInCart, couterPlus } = this.props;
+
         if (isInCart) {
-            //removeFromCart(id);
-            increaseQuantity(id);
+            this.setState({ added_qty: this.props.added_qty + 1 });
+            //couterPlus(id);
         } else {
             addToCart(id);
         }
     }
 
     render() {
-        const { name, price, currency, image, url, isInCart } = this.props;
+        const { name, brand, pack, price, currency, image, url, isInCart } = this.props;
 
         return (
             <div className="product thumbnail">
                 <img src={image} alt="product" className="img img-responsive"/>
-                <div className="caption">
-                    <h3>
-                        <a href={url}>{name}</a>
-                    </h3>
-                    <div className="product__price">{price} {currency}</div>
-                    <div className="product__button-wrap">
+                <div className="caption text-center">
+                    <p> {brand} </p>
+                    <h5 className="text-center">{name}</h5>
+                    <p> {pack} </p>
+                    <h4 className="text-center"> Rs {price} {currency}</h4>
+                    <div className="text-center">
                         {isInCart == false && (
-                            <button className='btn btn-primary' onClick={this.handleClick}>
+                            <button className='btn btn-primary' onClick={this.handleClick} >
                                 Add to cart
                             </button>
                         )}
@@ -56,7 +61,7 @@ Product.propTypes = {
     isInCart: PropTypes.bool.isRequired,
     addToCart: PropTypes.func.isRequired,
     removeFromCart: PropTypes.func.isRequired,
-    increaseQuantity: PropTypes.func.isRequired
+    couterPlus: PropTypes.func
 }
 
 export default Product;

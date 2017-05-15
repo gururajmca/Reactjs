@@ -1,19 +1,7 @@
 import React, { PropTypes } from 'react';
 
-const CartItem = ({ id, name, quantity, price, currency }) => {
+const CartItem = ({ id, name, price, currency, quantity }) => {
     
-    // handleClick = () => {
-    //     const { id, addToCart, removeFromCart, isInCart, increaseQuantity } = this.props;
-
-    //     //addToCart(id);
-    //     if (isInCart) {
-    //         //removeFromCart(id);
-    //         increaseQuantity(id);
-    //     } else {
-    //         addToCart(id);
-    //     }
-    // }
-
     return (
         <div className="col-md-12">
           <div className="col-md-4">{name}</div>
@@ -33,7 +21,7 @@ CartItem.propTypes = {
     name: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
     currency: PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired
+    quantity: PropTypes.number
 }
 
 export default CartItem;
